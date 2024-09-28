@@ -131,6 +131,7 @@ form input {
   font-size: 1.5rem;
   margin: 0 10px;
   padding: 0.75rem;
+  color: var(--text-color);
   background-color: var(--input-bg-color);
   box-shadow: 0 2px 5px var(--shadow-color);
   max-width: 500px;
@@ -223,6 +224,26 @@ form button:hover {
   border: 1px solid var(--border-color);
 }
 
+.github-corner-container {
+  position: fixed; /* 固定在页面的右上角 */
+  top: 0;
+  left: 0;
+  z-index: 10; /* 确保它显示在所有内容的上方 */
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+  cursor: pointer;
+}
+
+/* github corner animation */
+@keyframes octocat-wave {
+  0%, 100% { transform: rotate(0); }
+  20%, 60% { transform: rotate(-25deg); }
+  40%, 80% { transform: rotate(10deg); }
+}
+
+
 /* Responsive design */
 @media only screen and (max-width: 1000px) {
   .flexrow-container {
@@ -281,5 +302,15 @@ form button:hover {
   }
   form > button.light-button {
       box-shadow: 0 0 5px lightgray;
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
   }
 }
