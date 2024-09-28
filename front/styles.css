@@ -260,7 +260,7 @@ form button:hover {
       animation: 
           animated-text 3.5s steps(16,end) 0.5s 1 normal both,
           animated-cursor 750ms steps(16,end) infinite;
-      max-width: 300px;
+      max-width: 320px;
   }
 }
 
